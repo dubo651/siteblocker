@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Site Blocker</h2>
+      <label class="switch">
+        <input type="checkbox" id="master-toggle" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="add-site">
+      <input type="text" id="new-site-input" placeholder="Enter domain (e.g. example.com)">
+      <button id="add-site-btn">Add</button>
+    </div>
+
+    <div id="limit-warning" class="warning hidden">
+      ⚠️ Google limit reached (32 words). Some sites might not be blocked.
+    </div>
+
+    <div class="site-list" id="site-list">
+      <!-- Sites will be populated here -->
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
